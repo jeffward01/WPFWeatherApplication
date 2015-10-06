@@ -9,18 +9,18 @@
         AllowsTransparency="True"
         WindowStyle="None"
         
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="529">
     <Grid>
 
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="_Open"/>
-                <MenuItem Header="_Close"/>
                 <MenuItem Header="_Save"/>
+                <MenuItem Header="_Exit" Click="MenuItem_Click"/>
             </MenuItem>
         </Menu>
-        <TextBox x:Name="mainWindow_textBox_search" Width="386" Text="Enter Search Zip Code Here" Margin="10,19,129,289"/>
-        <Button x:Name="mainWindow_button_SearchButton" Content="Search" Padding="10px" Width="75" Margin="428,19,22,289"/>
+        <TextBox x:Name="mainWindow_textBox_search" Width="386" Text="Enter Search Zip Code Here" Margin="10,19,129,306" GotFocus="mainWindow_textBox_search_GotFocus" LostFocus="mainWindow_textBox_search_LostFocus"/>
+        <Button x:Name="mainWindow_button_SearchButton" Content="Search" Padding="10px" Margin="414,10,50,290"/>
         <Image x:Name="mainWindow_Image" Height="80px" Width="80px" Margin="19,76,456,224" RenderTransformOrigin="-0.78,0.3"/>
         <Label x:Name="mainWindow_label_cityState" Content="City, State" RenderTransformOrigin="2.395,4.615" Margin="104,76,287,247"/>
         <Label x:Name="mainWindow_label_Latlong" Content="Latitude / Longitude" RenderTransformOrigin="2.395,4.615" Margin="104,103,238,220"/>
@@ -40,6 +40,16 @@
         <Label x:Name="mainWindow_label_Elevation_Data" Content="16.000000" RenderTransformOrigin="2.395,4.615" Margin="383,76,38,247"/>
         <Label x:Name="mainWindow_label_LastUpdated" Content="Lasted Updated:" RenderTransformOrigin="2.395,4.615" Margin="344,103,85,220"/>
         <Label x:Name="mainWindow_label_LastUpdated_Data" Content="16.000000" RenderTransformOrigin="2.395,4.615" Margin="329,129,38,194"/>
+        <Label x:Name="mainWindow_label_Humidity" Content="Humidity:" RenderTransformOrigin="2.395,4.615" Margin="329,209,129,114"/>
+        <Label x:Name="mainWindow_label_Humidity_Data" Content="50%" RenderTransformOrigin="2.395,4.615" Margin="399,209,85,114"/>
+        <Label x:Name="mainWindow_label_Visibility" Content="Visibility:" RenderTransformOrigin="2.395,4.615" Margin="329,241,129,82"/>
+        <Label x:Name="mainWindow_label_Visibility_Data" Content="10.0 miles" RenderTransformOrigin="2.395,4.615" Margin="396,241,51,82"/>
+        <Label x:Name="mainWindow_label_UV" Content="UV:" RenderTransformOrigin="2.395,4.615" Margin="329,268,165,55"/>
+        <Label x:Name="mainWindow_label_UV_Data" Content="0.0" RenderTransformOrigin="2.395,4.615" Margin="360,268,104,55"/>
+        <Label x:Name="mainWindow_label_Percipitation" Content="Percipitation:" RenderTransformOrigin="2.395,4.615" Margin="329,295,116,28"/>
+        <Label x:Name="mainWindow_label_Percipitation_Data" Content="in (mm)" RenderTransformOrigin="2.395,4.615" Margin="414,295,50,28"/>
+        <Button x:Name="mainWindow_button_ClearButton" Content="Clear" Padding="10px" Margin="239,173,225,135" Click="mainWindow_button_ClearButton_Click"/>
+        <Button x:Name="mainWindow_button_ExitButton" Content="Exit" Padding="10px" Margin="239,220,225,88" Background="Red" FontWeight="Bold" FontSize="16" Click="mainWindow_button_ExitButton_Click_1"/>
 
 
 
