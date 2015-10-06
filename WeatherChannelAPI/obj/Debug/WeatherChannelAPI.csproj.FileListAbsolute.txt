@@ -16,3 +16,21 @@ c:\users\jward01\Documents\Visual Studio 2015\Projects\WeatherChannelAPI\Weather
 c:\users\jward01\Documents\Visual Studio 2015\Projects\WeatherChannelAPI\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.csproj.GenerateResource.Cache
 c:\users\jward01\Documents\Visual Studio 2015\Projects\WeatherChannelAPI\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.exe
 c:\users\jward01\Documents\Visual Studio 2015\Projects\WeatherChannelAPI\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.pdb
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\bin\Debug\WeatherChannelAPI.exe.config
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.exe
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.pdb
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\bin\Debug\WeatherChannelAPI.exe
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\bin\Debug\WeatherChannelAPI.pdb
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.csprojResolveAssemblyReference.cache
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\MainWindow.g.cs
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\App.g.cs
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\WeatherChannelAPI_MarkupCompile.cache
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\WeatherChannelAPI_MarkupCompile.lref
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\MainWindow.baml
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.g.resources
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.Properties.Resources.resources
+C:\Users\Aria Zavocki\Documents\GitHub\WPFWeatherApplication\WeatherChannelAPI\obj\Debug\WeatherChannelAPI.csproj.GenerateResource.Cache
