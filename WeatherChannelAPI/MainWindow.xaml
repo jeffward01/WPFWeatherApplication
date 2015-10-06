@@ -4,14 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherChannelAPI"
-        mc:Ignorable="d"
-        
+        mc:Ignorable="d"   
         AllowsTransparency="True"
-        WindowStyle="None"
-        
+        WindowStyle="None"      
         Title="MainWindow" Height="350" Width="529">
     <Grid>
-
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="_Open"/>
@@ -50,9 +47,5 @@
         <Label x:Name="mainWindow_label_Percipitation_Data" Content="in (mm)" RenderTransformOrigin="2.395,4.615" Margin="414,295,50,28"/>
         <Button x:Name="mainWindow_button_ClearButton" Content="Clear" Padding="10px" Margin="239,173,225,135" Click="mainWindow_button_ClearButton_Click"/>
         <Button x:Name="mainWindow_button_ExitButton" Content="Exit" Padding="10px" Margin="239,220,225,88" Background="Red" FontWeight="Bold" FontSize="16" Click="mainWindow_button_ExitButton_Click_1"/>
-
-
-
-
     </Grid>
 </Window>

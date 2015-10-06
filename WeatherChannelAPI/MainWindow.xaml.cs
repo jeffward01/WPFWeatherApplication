@@ -64,16 +64,51 @@ namespace WeatherChannelAPI
             mainWindow_label_UV_Data.Content = "";
             mainWindow_label_Visibility_Data.Content = "";
             mainWindow_label_Percipitation_Data.Content = "";
+        }
 
 
-               
 
+        ////////////////////////////////////
+
+
+        //OPEN BUTTON
+        //
+        //
+        public void writeFile()
+        {
+            //Assign Content in Labels to Strings
+            string myCityState_Data = mainWindow_label_cityState.Content.ToString();
+            string myLongLat_Data = mainWindow_label_Latlong.Content.ToString();
+            string myCurrentWeather_Data = mainWindow_label_CurrentWeather.Content.ToString();
+            string myTemperature_Data = mainWindow_label_Temperature_Data.Content.ToString();
+            string myFeelsLike_Data = mainWindow_label_FeelsLike_Data.Content.ToString();
+            string myWindType_Data = mainWindow_label_Wind_Data.Content.ToString();
+            string myWindSpeed_Data = mainWindow_label_WindSpeed_Data.Content.ToString();
+            string myWindDirection_Data = mainWindow_label_WindSpeed_Data.Content.ToString();
+            string myElevation_Data = mainWindow_label_Elevation_Data.Content.ToString();
+            string myLastUpdated_Data = mainWindow_label_LastUpdated_Data.Content.ToString();
+            string myHumidity_Data = mainWindow_label_Humidity_Data.Content.ToString();
+            string myVisibility_Data = mainWindow_label_Visibility_Data.Content.ToString();
+            string myUV_Data = mainWindow_label_UV_Data.Content.ToString();
+            string myPercipitation = mainWindow_label_Percipitation_Data.Content.ToString();
+            
+
+           
+           //Write Contents in Strings to a 'Super String'
+
+        
+            //Create a directory to write in
+
+            //Write files to Directory
 
         }
 
 
 
-        /// ////////////////////////////////
+
+        //SAVE BUTTON
+        //
+        //
 
 
         //EXIT BUTTONS
@@ -107,19 +142,14 @@ namespace WeatherChannelAPI
             }
         }
 
+
+        //CLEAR TEXTBOX
+        //
+        //
         //Clear Search TextBox on Focus
         private void mainWindow_textBox_search_GotFocus(object sender, RoutedEventArgs e)
         {
             mainWindow_textBox_search.Text = "";
-        }
-
-        //add text to Search TextBox on LOSS of focus
-        private void mainWindow_textBox_search_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if(mainWindow_textBox_search.Text == "")
-            {
-                mainWindow_textBox_search.Text = "Enter Search Zip Code Here";
-            }
         }
     }
 }
