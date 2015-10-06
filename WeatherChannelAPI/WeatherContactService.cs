@@ -38,6 +38,8 @@ namespace WeatherChannelAPI
                 myWeather.Visibility = o["current_observation"]["visibility_mi"].ToString();
                 myWeather.UV = o["current_observation"]["UV"].ToString();
                 myWeather.Precipitation = o["current_observation"]["precip_today_string"].ToString();
+                myWeather.WeatherIconURL = o["current_observation"]["icon_url"].ToString();
+                myWeather.Icon = o["current_observation"]["icon"].ToString();
 
                 //
 

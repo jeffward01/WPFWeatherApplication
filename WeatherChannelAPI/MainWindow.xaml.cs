@@ -16,6 +16,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.IO;
 using System.Reflection;
+using System.Net;
 
 namespace WeatherChannelAPI
 {
@@ -41,7 +42,7 @@ namespace WeatherChannelAPI
         {
             ClearLabels();
         }
-        
+
         //Clear Data Labels Code
         public void ClearLabels()
         {
@@ -109,13 +110,13 @@ namespace WeatherChannelAPI
             SuperString = SuperString + "Your Elevation is: " + myElevation_Data + Environment.NewLine;
             SuperString = SuperString + "Your Humidity Percent is: " + myHumidity_Data + Environment.NewLine;
             SuperString = SuperString + "Your Visibility is: " + myVisibility_Data + Environment.NewLine;
-            SuperString = SuperString + "Your UV Index is: " +myUV_Data + Environment.NewLine;
-            SuperString = SuperString + "Your Precipitation is: "+myPercipitation+ Environment.NewLine;
+            SuperString = SuperString + "Your UV Index is: " + myUV_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Precipitation is: " + myPercipitation + Environment.NewLine;
 
 
             //Create a directory to write in
-               
-           string path = "\\Your New Folder";
+
+            string path = "\\Your New Folder";
             Directory.CreateDirectory(path);
 
             //Write files to Directory
@@ -189,7 +190,7 @@ namespace WeatherChannelAPI
             //Clear Labels
             ClearLabels();
 
-          
+
 
             //Wire it up
             mainWindow_label_cityState.Content = result.CityState;
@@ -209,14 +210,47 @@ namespace WeatherChannelAPI
             mainWindow_label_Percipitation_Data.Content = result.Precipitation;
 
 
+            //Set image
 
-
-
+            setImage(result);
 
 
 
 
 
         }
+        public void setImage(WeatherResult result)
+        {
+            //Downlad the image from the url given to us by the API
+            using (var webClient = new WebClient())
+            {
+                string imageFilePath = System.IO.Path.Combine(Environment.CurrentDirectory, result.Icon + ".gif");
+                if (File.Exists(result.Icon + ".gif") == false)
+                {
+                    webClient.DownloadFile(result.WeatherIconURL, imageFilePath);
+                }
+
+                
+
+                var uri = new Uri(imageFilePath);
+
+                mainWindow_Image.Source = new BitmapImage(uri);
+
+            }
+            //Xhange the source of the image in XAML to be the image we just downloaded
+        }
+
+
+
+
+
+        //change the source of the image in the XAML to be the image we just downloaded
+
+
+
+
+
+
     }
 }
+

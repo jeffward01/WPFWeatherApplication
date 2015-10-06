@@ -20,8 +20,10 @@ namespace WeatherChannelAPI
         public string UV { get; set; }
         public string Precipitation { get; set; }
 
-        public string icon { get; set; }
-        public string icon_url { get; set; }
+        public string WeatherIconURL { get; set; }
+        public string Icon { get; set; }
+
+      
         // can't find icon that says "calm", etc. public string relative_humidity { get; set; }
     }
 }
