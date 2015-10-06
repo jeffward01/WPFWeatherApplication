@@ -12,11 +12,11 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Header="_Open"/>
-                <MenuItem Header="_Save"/>
+                <MenuItem Header="_Save" Click="MenuItem_Click_1"/>
                 <MenuItem Header="_Exit" Click="MenuItem_Click"/>
             </MenuItem>
         </Menu>
-        <TextBox x:Name="mainWindow_textBox_search" Width="386" Text="Enter Search Zip Code Here" Margin="10,19,129,306" GotFocus="mainWindow_textBox_search_GotFocus" LostFocus="mainWindow_textBox_search_LostFocus"/>
+        <TextBox x:Name="mainWindow_textBox_search" Width="386" Text="Enter Search Zip Code Here" Margin="10,19,129,306" GotFocus="mainWindow_textBox_search_GotFocus"/>
         <Button x:Name="mainWindow_button_SearchButton" Content="Search" Padding="10px" Margin="414,10,50,290"/>
         <Image x:Name="mainWindow_Image" Height="80px" Width="80px" Margin="19,76,456,224" RenderTransformOrigin="-0.78,0.3"/>
         <Label x:Name="mainWindow_label_cityState" Content="City, State" RenderTransformOrigin="2.395,4.615" Margin="104,76,287,247"/>

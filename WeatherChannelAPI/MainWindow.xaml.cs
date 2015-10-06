@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.IO;
+using System.Reflection;
 
 namespace WeatherChannelAPI
 {
@@ -91,16 +93,33 @@ namespace WeatherChannelAPI
             string myVisibility_Data = mainWindow_label_Visibility_Data.Content.ToString();
             string myUV_Data = mainWindow_label_UV_Data.Content.ToString();
             string myPercipitation = mainWindow_label_Percipitation_Data.Content.ToString();
-            
 
-           
-           //Write Contents in Strings to a 'Super String'
+            //Write Contents in Strings to a 'Super String'
+            string SuperString;
 
-        
+            SuperString = "Your City Data " + myCityState_Data + "\n";
+            SuperString = SuperString + "Your Long / Lat: " + myLongLat_Data + "\n";
+            SuperString = SuperString + "Your Current Weather: " + myCurrentWeather_Data + "\n";
+            SuperString = SuperString + "Your Current Temperature: " + myTemperature_Data + "\n";
+            SuperString = SuperString + "Your Weather Feels like: " + myFeelsLike_Data + "\n";
+            SuperString = SuperString + "Your Wind Type is: " + myWindType_Data + "\n";
+            SuperString = SuperString + "Your Wind Speed is: " + myWindSpeed_Data + "\n";
+            SuperString = SuperString + "Your Wind Direction is: " + myWindDirection_Data + "\n";
+            SuperString = SuperString + "Your Elevation is: " + myElevation_Data + "\n";
+            SuperString = SuperString + "Your Humidity Percent is: " + myHumidity_Data + "\n";
+            SuperString = SuperString + "Your Visibility is: " + myVisibility_Data + "\n";
+            SuperString = SuperString + "Your UV Index is: " +myUV_Data +"\n";
+            SuperString = SuperString + "Your Percipitation is: "+myPercipitation+"\n";
+
+
             //Create a directory to write in
+                string path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            path = path + "\\Your New Folder";
+            Directory.CreateDirectory(path);
 
             //Write files to Directory
-
+            string newSavePath = path + "\\File.txt";
+            File.WriteAllText(newSavePath, SuperString);
         }
 
 
@@ -150,6 +169,11 @@ namespace WeatherChannelAPI
         private void mainWindow_textBox_search_GotFocus(object sender, RoutedEventArgs e)
         {
             mainWindow_textBox_search.Text = "";
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            writeFile();
         }
     }
 }
