@@ -107,11 +107,13 @@ namespace WeatherChannelAPI
             }
         }
 
+        //Clear Search TextBox on Focus
         private void mainWindow_textBox_search_GotFocus(object sender, RoutedEventArgs e)
         {
             mainWindow_textBox_search.Text = "";
         }
 
+        //add text to Search TextBox on LOSS of focus
         private void mainWindow_textBox_search_LostFocus(object sender, RoutedEventArgs e)
         {
             if(mainWindow_textBox_search.Text == "")
