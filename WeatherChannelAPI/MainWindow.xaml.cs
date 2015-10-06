@@ -190,8 +190,6 @@ namespace WeatherChannelAPI
             //Clear Labels
             ClearLabels();
 
-
-
             //Wire it up
             mainWindow_label_cityState.Content = result.CityState;
             mainWindow_label_Latlong.Content = result.Longitude;
@@ -211,17 +209,11 @@ namespace WeatherChannelAPI
 
 
             //Set image
-
             setImage(result);
-
-
-
-
-
         }
         public void setImage(WeatherResult result)
         {
-            //Downlad the image from the url given to us by the API
+            //Download the image from the url given to us by the API
             using (var webClient = new WebClient())
             {
                 string imageFilePath = System.IO.Path.Combine(Environment.CurrentDirectory, result.Icon + ".gif");
@@ -229,28 +221,12 @@ namespace WeatherChannelAPI
                 {
                     webClient.DownloadFile(result.WeatherIconURL, imageFilePath);
                 }
-
-                
-
+                //Change the source of the image in XAML to be the image we just downloaded
                 var uri = new Uri(imageFilePath);
 
                 mainWindow_Image.Source = new BitmapImage(uri);
-
             }
-            //Xhange the source of the image in XAML to be the image we just downloaded
         }
-
-
-
-
-
-        //change the source of the image in the XAML to be the image we just downloaded
-
-
-
-
-
-
     }
 }
 
