@@ -1,0 +1,13 @@
+Your City Data City, State
+Your Long / Lat: Latitude / Longitude
+Your Current Weather: Current Weather
+Your Current Temperature: 99.4 F (16.2 C)
+Your Weather Feels like: 67.3 F (19.6 C)
+Your Wind Type is: Calm
+Your Wind Speed is: 50 MPH
+Your Wind Direction is: 50 MPH
+Your Elevation is: 16.000000
+Your Humidity Percent is: 50%
+Your Visibility is: 10.0 miles
+Your UV Index is: 0.0
+Your Percipitation is: in (mm)

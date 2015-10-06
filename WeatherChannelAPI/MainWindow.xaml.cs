@@ -58,6 +58,7 @@ namespace WeatherChannelAPI
             mainWindow_label_Wind_Data.Content = "";
             mainWindow_label_WindSpeed_Data.Content = "";
             mainWindow_label_WindDirection_Data.Content = "";
+            mainWindow_label_Latlong_Copy.Content = "";
 
             //Column Two
             mainWindow_label_Elevation_Data.Content = "";
@@ -97,24 +98,24 @@ namespace WeatherChannelAPI
             //Write Contents in Strings to a 'Super String'
             string SuperString;
 
-            SuperString = "Your City Data " + myCityState_Data + "\n";
-            SuperString = SuperString + "Your Long / Lat: " + myLongLat_Data + "\n";
-            SuperString = SuperString + "Your Current Weather: " + myCurrentWeather_Data + "\n";
-            SuperString = SuperString + "Your Current Temperature: " + myTemperature_Data + "\n";
-            SuperString = SuperString + "Your Weather Feels like: " + myFeelsLike_Data + "\n";
-            SuperString = SuperString + "Your Wind Type is: " + myWindType_Data + "\n";
-            SuperString = SuperString + "Your Wind Speed is: " + myWindSpeed_Data + "\n";
-            SuperString = SuperString + "Your Wind Direction is: " + myWindDirection_Data + "\n";
-            SuperString = SuperString + "Your Elevation is: " + myElevation_Data + "\n";
-            SuperString = SuperString + "Your Humidity Percent is: " + myHumidity_Data + "\n";
-            SuperString = SuperString + "Your Visibility is: " + myVisibility_Data + "\n";
-            SuperString = SuperString + "Your UV Index is: " +myUV_Data +"\n";
-            SuperString = SuperString + "Your Percipitation is: "+myPercipitation+"\n";
+            SuperString = "Your City Data " + myCityState_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Long / Lat: " + myLongLat_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Current Weather: " + myCurrentWeather_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Current Temperature: " + myTemperature_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Weather Feels like: " + myFeelsLike_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Wind Type is: " + myWindType_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Wind Speed is: " + myWindSpeed_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Wind Direction is: " + myWindDirection_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Elevation is: " + myElevation_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Humidity Percent is: " + myHumidity_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Visibility is: " + myVisibility_Data + Environment.NewLine;
+            SuperString = SuperString + "Your UV Index is: " +myUV_Data + Environment.NewLine;
+            SuperString = SuperString + "Your Precipitation is: "+myPercipitation+ Environment.NewLine;
 
 
             //Create a directory to write in
-                string path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-            path = path + "\\Your New Folder";
+               
+           string path = "\\Your New Folder";
             Directory.CreateDirectory(path);
 
             //Write files to Directory
@@ -174,6 +175,48 @@ namespace WeatherChannelAPI
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             writeFile();
+        }
+
+
+        //Initiate Search
+        private void mainWindow_button_SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            string MySearch = mainWindow_textBox_search.Text;
+
+            //Call Weather Channel Service Method, and save the result in a Weather Result Object
+            WeatherResult result = WeatherChannelService.GetWeatherFor(MySearch);
+
+            //Clear Labels
+            ClearLabels();
+
+          
+
+            //Wire it up
+            mainWindow_label_cityState.Content = result.CityState;
+            mainWindow_label_Latlong.Content = result.Longitude;
+            mainWindow_label_Latlong_Copy.Content = result.Latitude;
+            mainWindow_label_CurrentWeather.Content = result.CurrentWeather;
+            mainWindow_label_Temperature_Data.Content = result.Temperature;
+            mainWindow_label_FeelsLike_Data.Content = result.FeelsLike;
+            mainWindow_label_Wind_Data.Content = result.Wind;
+            mainWindow_label_WindSpeed_Data.Content = result.WindSpeed;
+            mainWindow_label_WindDirection_Data.Content = result.WindDirection;
+            mainWindow_label_Elevation_Data.Content = result.Elevation;
+            mainWindow_label_LastUpdated_Data.Content = result.LastUpdated;
+            mainWindow_label_Humidity_Data.Content = result.Humidity;
+            mainWindow_label_Visibility_Data.Content = result.Visibility;
+            mainWindow_label_UV_Data.Content = result.UV;
+            mainWindow_label_Percipitation_Data.Content = result.Precipitation;
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
